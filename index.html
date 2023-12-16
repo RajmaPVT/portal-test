@@ -23,22 +23,24 @@
     }
     .content {
         display: flex;
-        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
     .box {
-        width: auto;
-        height: 382px;
+        width: 100%;
+        max-width: 600px; /* Set a maximum width for better readability */
         border-radius: 12px;
         background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Center the content horizontally */
     }
     .button-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
         gap: 20px;
+        flex-wrap: wrap; /* Allow buttons to wrap to the next line on small screens */
     }
     .button-container a {
         display: flex;
@@ -61,8 +63,8 @@
         margin: 20px 0;
     }
     .slideshow-container {
-        width: 100%; /* Adjusted width to 100% for responsiveness */
-        max-width: 700px; /* Added max-width to limit the container size */
+        width: 100%;
+        max-width: 700px;
         height: 382px;
         position: relative;
     }
@@ -74,23 +76,18 @@
     }
 
     /* Media query for responsiveness */
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
         .content {
-            flex-direction: column; /* Stack content vertically on smaller screens */
-            align-items: center; /* Center align items on smaller screens */
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
         }
-        .box {
-            width: 100%; /* Make the box full width on smaller screens */
-            margin-bottom: 20px; /* Add margin to separate boxes on smaller screens */
-        }
-        .slideshow-container {
-            max-width: 100%; /* Make the slideshow container full width on smaller screens */
+        .button-container {
+            flex-direction: row;
         }
     }
 </style>
-    </style>
-    
-    </style>
+
 </head>
 <body>
     <div class="content">
