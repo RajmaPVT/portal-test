@@ -9,84 +9,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-xxx" crossorigin="anonymous" />
     <link rel="icon" type="image/x-icon" href="images/logo.ico">
 
-    <style>
-        body {
-            background-image: url('https://cdn.discordapp.com/attachments/1111926247270928417/1184452712411185162/bg1.gif?ex=658c068c&is=6579918c&hm=3ead874123feea385990ae18d158e90f4c290f2b95f2eef21fc4df810bfed3b2&');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
+<style>
+    body {
+        background-image: url('https://cdn.discordapp.com/attachments/1111926247270928417/1184452712411185162/bg1.gif?ex=658c068c&is=6579918c&hm=3ead874123feea385990ae18d158e90f4c290f2b95f2eef21fc4df810bfed3b2&');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .content {
+        display: flex;
+        gap: 40px;
+    }
+    .box {
+        width: auto;
+        height: 382px;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .button-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .button-container a {
+        display: flex;
+        align-items: center;
+        background-color: black;
+        color: white;
+        padding: 15px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .button-container i {
+        margin-right: 10px;
+        font-size: 24px;
+    }
+    .separator {
+        width: 100%;
+        height: 2px;
+        background-color: rgb(0, 0, 0);
+        margin: 20px 0;
+    }
+    .slideshow-container {
+        width: 100%; /* Adjusted width to 100% for responsiveness */
+        max-width: 700px; /* Added max-width to limit the container size */
+        height: 382px;
+        position: relative;
+    }
+    .mySlides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
         .content {
-            display: flex;
-            gap: 40px;
+            flex-direction: column; /* Stack content vertically on smaller screens */
+            align-items: center; /* Center align items on smaller screens */
         }
         .box {
-            width: auto;
-            height: 382px;
-            border-radius: 12px;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .button-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .button-container a {
-            display: flex;
-            align-items: center;
-            background-color: black;
-            color: white;
-            padding: 15px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .button-container i {
-            margin-right: 10px;
-            font-size: 24px;
-        }
-        .separator {
-            width: 100%;
-            height: 2px;
-            background-color: rgb(0, 0, 0);
-            margin: 20px 0;
+            width: 100%; /* Make the box full width on smaller screens */
+            margin-bottom: 20px; /* Add margin to separate boxes on smaller screens */
         }
         .slideshow-container {
-            width: 100%; /* Adjusted width to 100% for responsiveness */
-            max-width: 700px; /* Added max-width to limit the container size */
-            height: 382px;
-            position: relative;
+            max-width: 100%; /* Make the slideshow container full width on smaller screens */
         }
-        .mySlides img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-    
-        /* Media query for responsiveness */
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column; /* Stack content vertically on smaller screens */
-                align-items: auto; /* Center align items on smaller screens */
-            }
-            .box {
-                width: auto; /* Make the box full width on smaller screens */
-                margin-bottom: 20px; /* Add margin to separate boxes on smaller screens */
-            }
-            .slideshow-container {
-                max-width: auto; /* Make the slideshow container full width on smaller screens */
-            }
-        }
+    }
+</style>
     </style>
     
     </style>
