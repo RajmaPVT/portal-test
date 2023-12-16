@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal.io</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-xxx" crossorigin="anonymous" />
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+
+    <style>
+        body {
+            background-image: url('https://cdn.discordapp.com/attachments/1111926247270928417/1184452712411185162/bg1.gif?ex=658c068c&is=6579918c&hm=3ead874123feea385990ae18d158e90f4c290f2b95f2eef21fc4df810bfed3b2&');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .content {
+            display: flex;
+            gap: 40px;
+        }
+        .box {
+            width: auto;
+            height: 382px;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .button-container a {
+            display: flex;
+            align-items: center;
+            background-color: black;
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .button-container i {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        .separator {
+            width: 100%;
+            height: 2px;
+            background-color: rgb(0, 0, 0);
+            margin: 20px 0;
+        }
+        .slideshow-container {
+            width: 100%; /* Adjusted width to 100% for responsiveness */
+            max-width: 700px; /* Added max-width to limit the container size */
+            height: 382px;
+            position: relative;
+        }
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: auto; /* Stack content vertically on smaller screens */
+                align-items: auto; /* Center align items on smaller screens */
+            }
+            .box {
+                width: auto; /* Make the box full width on smaller screens */
+                margin-bottom: 20px; /* Add margin to separate boxes on smaller screens */
+            }
+            .slideshow-container {
+                max-width: auto; /* Make the slideshow container full width on smaller screens */
+            }
+        }
+    </style>
+    
+    </style>
+</head>
+<body>
+    <div class="content">
+        <iframe src="https://open.spotify.com/embed/playlist/0CFuMybe6s77w6QQrJjW7d?utm_source=generator" width="500" height="382px" frameborder="" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="box">
+            <div class="button-container">
+                <a href="https://www.instagram.com/coder.aryan/"><i class="bi bi-instagram"></i>Instagram</a>
+                <a href="https://www.linkedin.com/in/aryan-kaul-83a857253"><i class="bi bi-linkedin"></i>LinkedIn</a>
+                <a href="https://discord.gg/vpkmgcMTUD"><i class="bi bi-discord"></i>Discord</a>
+                <a href="https://github.com/RajmaPlAyZ"><i class="bi bi-github"></i>Github</a>
+            </div>
+            <hr class="separator" />
+            <div class="button-container">
+                <a href="https://rajmapvt.github.io/aryankaul"><i class="bi bi-person"></i>Portfolio</a>
+                <a href="https://rajmapvt.github.io/pixelfight"><i class="bi bi-app"></i>Pixel Fight</a>
+                <a href="https://trello.com/1/cards/657025427779e72bc2dd61d9/attachments/65708804eaa5556f2cb765f4/download/image.png"><i class="bi bi-cloud"></i>ToDo App</a>
+                <a href="https://rajmapvt.github.io/aryankaul/#work"><i class="bi bi-code-slash"></i>Other</a>
+            </div>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="images/image1.png" alt="Slide 1">
+            </div>
+            <div class="mySlides">
+                <img src="images/image2.png" alt="Slide 2">
+            </div>
+            <div class="mySlides">
+                <img src="images/image3.png" alt="Slide 3">
+            </div>
+            <div class="mySlides">
+                <img src="images/image4.png" alt="Slide 3">
+            </div>
+            <div class="mySlides">
+                <img src="images/image5.jfif" alt="Slide 3">
+            </div>
+            <div class="mySlides">
+                <img src="images/image6.jfif" alt="Slide 3">
+            </div>
+            <div class="mySlides">
+                <img src="images/image7.PNG" alt="Slide 3">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for the image slideshow
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+    </script>
+</body>
+</html>
